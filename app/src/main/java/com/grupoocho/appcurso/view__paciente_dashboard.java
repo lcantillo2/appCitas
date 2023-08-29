@@ -17,7 +17,6 @@ import com.grupoocho.appcurso.Model.User;
 
 public class view__paciente_dashboard extends AppCompatActivity {
     private TextView txtCliente;
-    private String name;
     private String uid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,6 @@ public class view__paciente_dashboard extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User userModel = dataSnapshot.getValue(User.class);
-                Toast.makeText(getApplicationContext(),"nombrees :"+userModel.getName(), Toast.LENGTH_SHORT).show();
                 txtCliente.setText(userModel.getName());
                 uid = userModel.getId();
             }
