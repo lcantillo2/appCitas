@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view_login">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardInicio"
+        android:layout_width="418dp"
+        android:layout_height="44dp"
+        app:cardBackgroundColor="#ff6750a4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBackInicio"
+                android:layout_width="67dp"
+                android:layout_height="39dp"
+                android:layout_weight="1"
+                android:background="#ff6750a4"
+                android:foregroundGravity="top"
+                android:foregroundTint="#FAF8F8"
+                android:importantForAccessibility="no"
+                android:onClick="regresar"
+                android:src="?attr/homeAsUpIndicator"
+                app:tint="#FBFBFB" />
+
+            <TextView
+                android:id="@+id/txtBackInicio"
+                android:layout_width="371dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgInicioSesion"
+        android:layout_width="232dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tl_view_iniciar_sesion"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardInicio" />
+
+    <TextView
+        android:id="@+id/txtTipoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgInicioSesion" />
+
+    <LinearLayout
+        android:id="@+id/lyInicio"
+        android:layout_width="348dp"
+        android:layout_height="267dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoUsuario"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_text_email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_text_password"
+            android:inputType="numberPassword"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnInicio"
+            android:text="@string/btn_text_iniciar"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegistrarView"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:onClick="btnRegistar"
+        android:text="@string/btn_view_registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyInicio" />
+</androidx.constraintlayout.widget.ConstraintLayout>
